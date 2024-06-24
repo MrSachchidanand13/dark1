@@ -49,6 +49,7 @@
 <body>
     
     <div class="container">
+        <button onclick="redirectToURL()">Blur faces</button>
         <h1>Upload and Process Image</h1>
         <form id="uploadForm" enctype="multipart/form-data">
             <label for="imageInput" class="file-label">Choose File</label>
@@ -107,6 +108,9 @@
             document.body.appendChild(downloadLink);
             downloadLink.click();
             document.body.removeChild(downloadLink);
+        }
+        function redirectToURL() {
+            window.location.href = "https://blur-7iyv.onrender.com";
         }
     </script>
 </body>
