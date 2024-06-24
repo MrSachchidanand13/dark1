@@ -7,6 +7,8 @@
         body {
             background: linear-gradient(to right, lime, orange);
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .container {
             margin: 20px;
@@ -20,7 +22,7 @@
             max-width: 100%;
             margin-top: 20px;
         }
-        button, .file-label {
+        button, .file-label, .redirect-button {
             background: linear-gradient(to right, lime, orange);
             border: none;
             color: white;
@@ -31,15 +33,23 @@
             transition: background 0.3s;
             display: inline-block;
         }
-        button:hover, .file-label:hover {
+        button:hover, .file-label:hover, .redirect-button:hover {
             background: linear-gradient(to right, orange, lime);
         }
         input[type="file"] {
             display: none;
         }
+        .top-right-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="top-right-button">
+        <button class="redirect-button" onclick="window.location.href='https://blur-1.onrender.com'">Go to Blur page</button>
+    </div>
     <div class="container">
         <h1>Upload and Process Image</h1>
         <form id="uploadForm" enctype="multipart/form-data">
